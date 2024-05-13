@@ -1,0 +1,204 @@
+
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+#wheelOfFortune {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    rotate: 180deg;
+}
+
+#wheel {
+    display: block;
+}
+
+
+#spin {
+    font: 1.5em/0 sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin: -15%;
+    background: #6a09b6;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+    rotate: 180deg;
+}
+
+#spin::after {
+    content: '';
+    position: absolute;
+    left: 3.7em;
+
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wheel-input {
+    display: inline-flex;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 190px;
+    position: relative;
+
+}
+
+.wheel-input input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(141, 109, 255);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wheel-input label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(255, 255, 255);
+}
+
+.wheel-input :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em 0em 0em 1.3em;
+    padding: 0.4em;
+    background-color: #212121;
+}
+
+.input-group :is(input:focus, input:valid) {
+    border-color: #6a09b6;
+}
+
+#addSector{
+    color: rgb(255, 255, 255);
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(141, 109, 255);
+    background-color: transparent;
+    border-radius: 22px;
+    box-sizing: border-box;
+}
+
+#addSector:hover {
+    border-color: #6a09b6;
+}
+
+
+
+
+
+
+
+table {border-collapse: collapse; font-family: helvetica}
+td, th {
+    border: 1px solid;
+    padding: 10px;
+    min-width: 200px;
+    background: white;
+    box-sizing: border-box;
+    text-align: left;
+}
+.table-container {
+    position: relative;
+    max-height: 300px;
+    overflow: scroll;
+    max-width: 900px;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+tfoot {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+}
+
+tfoot td {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    background: hsl(20, 50%, 70%);
+}
+
+
+
+tbody {
+    overflow: scroll;
+    height: 200px;
+}
+
+
+
+
+
+@media (max-width: 850px) {
+    td, th {
+        min-width: 150px;
+    }
+
+    .table-container {
+        max-width: 500px;
+    }
+
+
+}
+@media (max-width: 600px) {
+    td, th {
+        min-width: 100px;
+    }
+
+    .table-container {
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8">
+    <script defer src="/js/wheel.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/wheel.css">
+</head>
+
+<body class="base">
+<audio id="spinSound" preload="auto">
+    <source src="music/228047-890ee7cc-1a85-4882-b566-e3cc8dcb00d0.mp3" type="audio/mpeg">
+</audio>
+<audio id="myAudio" preload="auto">
+    <source src="music/228047-a7c4d017-d4eb-4b46-8c07-e6de87c6299c.mp3" type="audio/mpeg">
+</audio>
+<header class="header">
+    <div class="header__inner">
+        <div class="header__logo-wrapper glow-on-hover">
+            <img class="header__logo" src="icons/duck.svg" alt="Duck">
+            <div class="header__logo-text">
+                <p class="header__logo-title">Lucky</p>
+                <p class="header__logo-description">Duck</p>
+            </div>
+        </div>
+
+
+
+        <div class="header__contents">
+            <button class="glow-on-hover cube-html" type="button">Dice</button>
+            <button class="glow-on-hover magic-html" type="button">Magic Ball</button>
+            <button class="glow-on-hover wheel-html" type="button">Wheel of Fortune</button>
+
+        </div>
+    </div>
+</header>
+<main>
+<div id="wheelOfFortune">
+    <canvas id="wheel"  width="300" height="300"></canvas>
+    <div id="spin">SPIN</div>
+</div>
+    <div>
+        <div class="wheel-input input-group">
+            <input type="text" id="sectorName" required="" autocomplete="off">
+            <label >Name</label>
+        </div>
+        <div class="wheel-input input-group">
+            <input type="text" id="sectorWeight" required="" autocomplete="off">
+            <label >Weight</label>
+        </div>
+        <button id="addSector" class=" wheel-input ">add sector</button>
+    </div>
+<div class="table-container">
+
+    <table id="sectorsTable">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Weight</th>
+            <th>Chance</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>
+</main>
+<footer>
+
+</footer>
+<script src="./js/script.js"></script>
+</body>
+</html>
